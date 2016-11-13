@@ -1,7 +1,7 @@
 # Progressive web application
 
 ### Todo list
-- [ ] Implement IndexDB for caching data (instead of localStorage), consider use [localForge](http://mozilla.github.io/localForage/)
+- [ ] Implement IndexDB for caching data (instead of localStorage), consider use [localForge](https://github.com/localForage/localForage)
 
 ### What is a Progressive Web App?
 A Progressive Web App is:
@@ -18,3 +18,6 @@ A Progressive Web App is:
 - Linkable - Easily share via URL, does not require complex installation.
 
 [Google Tutorial](https://codelabs.developers.google.com/codelabs/your-first-pwapp/index.html)
+
+### Service workers
+[Info](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers)
