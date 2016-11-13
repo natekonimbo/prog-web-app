@@ -1,6 +1,9 @@
 # Progressive web application
 
-What is a Progressive Web App?
+### Todo list
+- [ ] Implement IndexDB for caching data (instead of localStorage), consider use [localForge](http://mozilla.github.io/localForage/)
+
+### What is a Progressive Web App?
 A Progressive Web App is:
 
 - Progressive - Works for every user, regardless of browser choice because it's built with progressive enhancement as a core tenet.
