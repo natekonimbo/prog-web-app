@@ -21,3 +21,6 @@ A Progressive Web App is:
 
 ### Service workers
 [Info](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers)
+
+### Web-app Manifest
+[Info](https://developer.mozilla.org/en-US/docs/Web/Manifest)
