@@ -24,3 +24,6 @@ A Progressive Web App is:
 
 ### Web-app Manifest
 [Info](https://developer.mozilla.org/en-US/docs/Web/Manifest)
+
+### RAIL
+[Info](https://developers.google.com/web/fundamentals/performance/rail)
