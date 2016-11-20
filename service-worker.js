@@ -1,4 +1,4 @@
-var cacheName = 'weatherPWA-step-6-1';
+var cacheName = 'sw-ntsw-v1';
 var filesToCache = [];
 
 self.addEventListener('install', function(e) {
