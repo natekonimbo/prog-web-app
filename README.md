@@ -27,3 +27,6 @@ A Progressive Web App is:
 
 ### RAIL
 [Info](https://developers.google.com/web/fundamentals/performance/rail)
+
+### App hosted by Firebase
+[Link](https://nate-pwa.firebaseapp.com/)
