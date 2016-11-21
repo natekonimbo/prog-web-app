@@ -1,5 +1,23 @@
-var cacheName = 'weatherPWA-step-6-1';
-var filesToCache = [];
+var cacheName = 'weatherPWA-step-6-2';
+var filesToCache = [
+    '/',
+    '/index.html',
+    '/scripts/app.js',
+    '/styles/inline.css',
+    '/images/clear.png',
+    '/images/cloudy-scattered-showers.png',
+    '/images/cloudy.png',
+    '/images/fog.png',
+    '/images/ic_add_white_24px.svg',
+    '/images/ic_refresh_white_24px.svg',
+    '/images/partly-cloudy.png',
+    '/images/rain.png',
+    '/images/scattered-showers.png',
+    '/images/sleet.png',
+    '/images/snow.png',
+    '/images/thunderstorm.png',
+    '/images/wind.png'
+];
 
 self.addEventListener('install', function(e) {
     console.log('[ServiceWorker] Install');
@@ -11,6 +29,7 @@ self.addEventListener('install', function(e) {
     );
 });
 
+// activate fires when SW starts
 self.addEventListener('activate', function(e) {
     console.log('[ServiceWorker] Activate');
     e.waitUntil(
@@ -24,4 +43,15 @@ self.addEventListener('activate', function(e) {
         })
     );
     return self.clients.claim();
+});
+
+// serve app shell from cache
+self.addEventListener('fetch', function(e) {
+    console.log('[ServiceWorker] Fetch', e.request.url);
+    e.respondWith(
+        // return cached response or fetch new
+        caches.match(e.request).then(function(response) {
+            return response || fetch(e.request);
+        })
+    );
 });
