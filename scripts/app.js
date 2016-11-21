@@ -171,7 +171,7 @@
                     app.updateForecastCard(results);
                 }
             } else {
-                checkConnectivity();
+                app.checkConnectivity();
                 // Return the initial weather forecast since no data is available.
                 app.updateForecastCard(initialWeatherForecast);
             }
