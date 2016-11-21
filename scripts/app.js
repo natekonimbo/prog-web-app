@@ -137,6 +137,14 @@
         }
     };
 
+    /**
+     * Checking connection status
+     * @return {[type]} [description]
+     */
+    app.checkConnectivity = function() {
+        if (navigator.onLine == false)
+            document.querySelector('body').classList.add('offline');
+    }
 
     /*****************************************************************************
      *
@@ -339,12 +347,6 @@
             label: initialWeatherForecast.label
         }];
         app.saveSelectedCities();
-    }
-
-    // Offline style
-    app.checkConnectivity = function() {
-        if (navigator.onLine == false)
-            document.querySelector('body').classList.add('offline');
     }
 
     /**

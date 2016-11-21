@@ -1,4 +1,5 @@
-var cacheName = 'weatherPWA-step-6-4';
+// cacheName needs to be incremented to apply changes
+var cacheName = 'weatherPWA-step-6-5';
 var filesToCache = [
     '/',
     '/index.html',
