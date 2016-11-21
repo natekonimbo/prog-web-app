@@ -171,6 +171,7 @@
                     app.updateForecastCard(results);
                 }
             } else {
+                checkConnectivity();
                 // Return the initial weather forecast since no data is available.
                 app.updateForecastCard(initialWeatherForecast);
             }
@@ -338,6 +339,12 @@
             label: initialWeatherForecast.label
         }];
         app.saveSelectedCities();
+    }
+
+    // Offline style
+    app.checkConnectivity = function() {
+        if (navigator.onLine == false)
+            document.querySelector('body').classList.add('offline');
     }
 
     /**
