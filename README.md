@@ -30,3 +30,6 @@ A Progressive Web App is:
 
 ### App hosted by Firebase
 [Link](https://nate-pwa.firebaseapp.com/)
+
+### The Offline Cookbook
+[Link](https://jakearchibald.com/2014/offline-cookbook/#cache-network-race)
