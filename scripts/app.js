@@ -164,8 +164,20 @@
         var statement = 'select * from weather.forecast where woeid=' + key;
         var url = 'https://query.yahooapis.com/v1/public/yql?format=json&q=' +
             statement;
-        // TODO add cache logic here
-
+        // Fetch data from SW cache
+        if ('caches' in window) {
+            caches.match(url).then(function(response) {
+                if (response) {
+                    response.json().then(function updateFromCache(json) {
+                        var results = json.query.results;
+                        results.key = key;
+                        results.label = label;
+                        results.created = json.query.created;
+                        app.updateForecastCard(results);
+                    });
+                }
+            });
+        }
         // Fetch the latest data.
         var request = new XMLHttpRequest();
         request.onreadystatechange = function() {
@@ -272,8 +284,8 @@
      * discussion.
      */
     var initialWeatherForecast = {
-        key: '2459115',
-        label: 'New York, NY',
+        key: '1968212',
+        label: 'Tel Aviv, IL',
         created: '2016-07-22T01:00:00Z',
         channel: {
             astronomy: {
